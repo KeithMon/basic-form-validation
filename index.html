@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Form Validation</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen">
+</head>
+<body onLoad="onPageLoad('textField')">
+<a class="back" href="../">Back to <strong>JavaScript Projects</strong> List</a>
+
+<h1 id="h1">Form Validation</h1>
+
+<p>JavaScript will check that there is content in the text field.<p>
+<p>If there is no content in the field than it will display an error.<p>
+<p>If the browser accessing this page is Internet Explorer it will show instructions below the text field (because most versions of IE don't support the HTML attribute 'placeholder').</p>
+<p>If the email address is not valid it will display a different error.</p>
+
+<form>	
+	<input type="text" id="textField" placeholder="Name" onBlur="notBlank('textField', 'textFieldResult')" onFocus="removeError('textFieldResult')"/>
+		<p class="result" id="textFieldResult"></p>
+	
+	<input type="text" id="email" placeholder="Email" onBlur="validateEmail('email', 'emailResult')" onFocus="removeError('emailResult')"/>
+		<p class="result" id="emailResult"></p>
+
+	<input type="submit" id="submit" value="Submit" onClick="formSubmit(); cancelDefaultAction(event)" />
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>

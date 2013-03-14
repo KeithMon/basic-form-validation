@@ -1,0 +1,27 @@
+body {
+	width: 400px;
+	margin: 0 auto;
+	font-family: sans-serif;
+}
+p {
+
+}
+input, label, button {
+	width: 100%;
+}
+.error {
+	color: red;
+	font-style: italic;
+	font-size: .8em;
+}
+.instructionGray {
+	color: #777;
+	font-size: .8em;
+}
+form p, .result {
+	margin: 0;
+}
+.back {
+	font-size: .8em;
+	color: black;
+}
